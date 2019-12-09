@@ -15,7 +15,7 @@ def keras_mobilenetv2_cifar(input_shape=(32,32,3), num_classes=10):
     top_model.add(keras.layers.Dense(num_classes))
     top_model.add(keras.layers.Activation('relu'))
 
-    mobilnetv2_cifar = keras.models.Model(inputs=mobilenetv2_imagenet.input, outputs=top_model(mobilenetv2_imagenet.output))
+    mobilenetv2_cifar = keras.models.Model(inputs=mobilenetv2_imagenet.input, outputs=top_model(mobilenetv2_imagenet.output))
     return mobilenetv2_cifar
 
 
